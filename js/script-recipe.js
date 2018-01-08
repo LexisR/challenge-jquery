@@ -9,8 +9,10 @@ $(document).ready( function(){
  
 $('.js-show-recipe').on('click', function(){
   $('.page').removeClass('make');
+  $('.page').removeClass('active');
 });
 
 $('.js-show-make').on('click', function(){
   $('.page').addClass('make');
+  $('.page').addClass('active');
 });
