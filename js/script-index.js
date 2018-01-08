@@ -35,7 +35,7 @@ printNews();// llamar a la funcion
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-recipe.html"
 */
-function renderRecipe(recipe) {
+
 	function renderRecipe(recipe) {
 		//console.log('Voy a pintar la receta: ', recipe);
 		$('.list-recipes').append("<a class='item-recipe' href='#'>" +
@@ -48,10 +48,10 @@ function renderRecipe(recipe) {
 				"</span>" +
 			"</span>" +
 		"</span>" +
-		"<img src='" + recipe.source.url + "' />" +
+		"<img src='img/recipes/640x480/"+recipe.name+".jpg'/>"+
 		"</a>")
-		}
-}
+	}
+
 
 
 
@@ -81,18 +81,15 @@ function renderActivity(recipe) {
 	$('.list-activities').append("<a href='#' class='item-activity'>"+
   "<span class='attribution'>"+
   "<span class='avatar'>"+
-  	"<img src='"+ recipe.userAvatar+"' class='image-avatar'>"+
+ 		"<img src='"+ recipe.userAvatar+"' class='image-avatar'>"+
   "</span>"+
   "<span class='meta'>"+
-  "<span class='author'>"+recipe.userName+" </span> made"+
-  "<span class='recipe'>"+recipe.recipeName+"</span>: "+recipe.text+""+
-	"<span class='location'>&mdash;"+recipe.place+"</span>"+
+  	"<span class='author'>"+recipe.userName+" </span> made"+
+  	"<span class='recipe'>"+recipe.recipeName+"</span>: "+recipe.text+""+
+		"<span class='location'>&mdash;"+recipe.place+"</span>"+
   "</span>"+
-  
   "</span>"+
-
-  "<div class='bg-image' style='background-image: url('"+recipe.image+"')'></div>"+
-
+  "<div class='bg-image' style='background-image: url("+recipe.image+")'></div>"+
 "</a>");
 	
 }
